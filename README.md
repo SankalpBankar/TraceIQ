@@ -1,5 +1,4 @@
 # TraceIQ
-<<<<<<< HEAD
 
 **AI-Powered Document Intelligence Assistant using RAG and Generative AI**
 
@@ -104,6 +103,4 @@ python manage.py test documents
 - Scanned PDFs need OCR, which is not supported.
 - Similarity does not guarantee factual support. The prompt instructs Gemini to abstain, but this is not a hard guarantee.
 - Retrieved excerpts are sent to the Gemini API. Do not upload confidential documents unless permitted.
-=======
 TraceIQ is an AI-powered document intelligence assistant that uses RAG to deliver evidence-backed answers, traceable citations, and actionable insights from uploaded documents.
->>>>>>> c4c13f82b0654873a56011029ee2f6fee3d0e2cb
