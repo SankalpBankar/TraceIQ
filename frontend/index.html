@@ -1,0 +1,106 @@
+{% load static %}<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TraceIQ — Ask your documents</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">
+      <span class="brand-mark">T</span>
+      TraceIQ
+    </a>
+    <span class="privacy"><i></i> PRIVATE WORKSPACE</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">YOUR DOCUMENT ASSISTANT</div>
+      <h1>Ask your documents.<br><em>Find your answers.</em></h1>
+      <p>Upload PDFs or text files, then ask a question. TraceIQ will help you find the information you need.</p>
+    </section>
+
+    <section class="workspace">
+      <aside class="card library">
+        <div class="heading">
+          <div>
+            <small>STEP 1</small>
+            <h2>Your documents</h2>
+          </div>
+          <span id="file-count" class="pill">0 FILES</span>
+        </div>
+
+        <label id="dropzone" class="dropzone">
+          <input id="file-input" type="file" accept=".txt,.pdf,text/plain,application/pdf" multiple>
+          <span class="upload-icon">↑</span>
+          <strong>Drag files here or <b>choose files</b></strong>
+          <small>PDF or TXT · Maximum 15 MB per file</small>
+        </label>
+
+        <div class="list-heading">
+          <span>YOUR FILES</span>
+          <button id="clear-files" type="button" disabled>Remove all</button>
+        </div>
+
+        <div id="file-list"></div>
+        <p id="empty-state" class="empty">No documents yet.<br>Choose a file to get started.</p>
+        <p class="privacy-note">TXT files stay in this browser. PDFs are sent to your local server to read.</p>
+      </aside>
+
+      <section class="card ask-card">
+        <div class="heading">
+          <div>
+            <small>STEP 2</small>
+            <h2>Ask a question</h2>
+          </div>
+          <span class="sparkle">✳</span>
+        </div>
+
+        <form id="question-form">
+          <label class="sr-only" for="question">Your question</label>
+          <textarea
+            id="question"
+            rows="3"
+            placeholder="What would you like to know?"
+            disabled
+          ></textarea>
+
+          <div class="form-bottom">
+            <span>Press Enter to ask · Shift+Enter for a new line</span>
+            <button id="ask-button" type="submit" disabled>Ask question ↗</button>
+          </div>
+        </form>
+
+        <div id="answer" aria-live="polite">
+          <div class="answer-empty">
+            <span class="answer-icon">✳</span>
+            <strong>Your answer will appear here</strong>
+            <p>Add a document and ask a question. Matching passages will appear below.</p>
+            <button type="button" data-question="What is this document about?">
+              “What is this document about?”
+            </button>
+            <button type="button" data-question="What are the main points?">
+              “What are the main points?”
+            </button>
+          </div>
+        </div>
+
+        <div class="mode">
+          <i></i>
+          Connected · TXT searched in browser, PDFs searched by the Django backend
+        </div>
+      </section>
+    </section>
+
+    <footer>
+      <span>TRACEIQ</span>
+      <span>Answers based on your documents.</span>
+    </footer>
+  </main>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="{% static 'app.js' %}"></script>
+</body>
+</html>
