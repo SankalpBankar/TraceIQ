@@ -1,0 +1,90 @@
+
+# ==============================
+# Environment variables and secrets
+# ==============================
+.env
+.env.*
+!.env.example
+
+# ==============================
+# Python backend
+# ==============================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.python-version
+venv/
+.venv/
+env/
+ENV/
+pip-wheel-metadata/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ==============================
+# Uploaded documents and user data
+# ==============================
+uploads/
+data/uploads/
+*.pdf
+*.docx
+
+# ==============================
+# Vector databases and embeddings
+# ==============================
+chroma_db/
+chroma_data/
+faiss_index/
+vector_store/
+*.faiss
+*.index
+
+# ==============================
+# Logs and temporary files
+# ==============================
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+
+# ==============================
+# React / Node.js / Vite
+# ==============================
+node_modules/
+frontend-react/node_modules/
+frontend-react/dist/
+frontend-react/.vite/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# ==============================
+# Build outputs
+# ==============================
+dist/
+build/
+
+# ==============================
+# IDE and editor files
+# ==============================
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ==============================
+# Jupyter notebooks
+# ==============================
+.ipynb_checkpoints/
+
+# ==============================
+# OS and local configuration
+# ==============================
+Desktop.ini
